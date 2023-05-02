@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 
 const Register = () => {
@@ -39,6 +41,15 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
+
+        if(password !== confirm){
+            toast.error('Password Not Match!!');
+            return
+        }
+        else if(password.length < 6){
+            toast.error('Password is less than 6 characters!!');
+            return
+        }
 
         console.log(name, email, password, confirm);
         createUser(email, password)
@@ -105,6 +116,7 @@ const Register = () => {
                             <button onClick={handleGoogleSignIn} className="mb-5 btn btn-outline btn-error">Google Register</button>
 
                             <button onClick={handleGitHubSignIn} className="btn btn-outline ml-5">GitHub Register</button>
+                            <Toaster />
 
                             <p>Already Have an Account <Link to='/login'><span className='text-orange-500 font-bold'>Login</span></Link></p>
                         </div>
