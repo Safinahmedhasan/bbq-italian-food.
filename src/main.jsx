@@ -11,6 +11,7 @@ import Home from './component/Home/Home.jsx';
 import Blog from './component/Blog/Blog.jsx';
 import Login from './component/Login/Login.jsx';
 import Register from './component/Register/Register.jsx';
+import AuthProvider from './component/AuthProvider/AuthProvider.jsx';
 
 
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path:'login',
+        path: 'login',
         element: <Login></Login>
       },
       {
@@ -41,6 +42,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

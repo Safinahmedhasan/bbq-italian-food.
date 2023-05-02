@@ -29,6 +29,14 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-warning">Login</button>
                             </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-outline btn-error">
+                                    Google Sign-in
+                                </button>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-outline">GitHub Sign-in</button>
+                            </div>
                             <p>Don’t have an account?  <Link to='/register'><span className='text-orange-500 font-bold'>Register</span></Link></p>
                         </div>
                     </div>
