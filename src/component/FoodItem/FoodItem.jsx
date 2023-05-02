@@ -23,7 +23,7 @@ const FoodItem = () => {
                     
                     <img className='rounded h-[280px] w-full' src=" https://i.ibb.co/f8mZxvj/g2-jpg.webp" alt="" />
                     <div className='p-5'>
-                    <span className="indicator-item badge badge-primary">new</span>
+                        <span className="indicator-item badge badge-primary">new</span>
                         <h2 className='text-3xl mb-2'>Risotto</h2>
                         <p>Italy's extensive coastline contributes to a vibrant seafood tradition. Popular dishes include spaghetti alle vongole (spaghetti with clams), calamari, grilled fish, or seafood stew like cioppino.</p>
                     </div>

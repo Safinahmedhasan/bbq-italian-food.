@@ -4,7 +4,13 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut, googleSignIn } = useContext(AuthContext);
+
+    const handleLogOut = () =>{
+        logOut()
+        .then()
+        .catch(error =>console.log(error))
+    }
 
     return (
         <div>
@@ -30,7 +36,7 @@ const Header = () => {
                 <div className="navbar-end">
                     <div>
                         {user ?
-                            <Link to='/'><button className='btn btn-warning'>Logout</button></Link> :
+                            <button onClick={handleLogOut} className='btn btn-warning'>Logout</button> :
                             <Link to='/login'><button className='btn btn-warning'>Login</button></Link>
                         }
                     </div>
