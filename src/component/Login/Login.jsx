@@ -46,9 +46,9 @@ const Login = () => {
                 const loggedUser = result.user;
                 navigate(from , {replace: true})
             })
-            .catch(error => {
-                toast.error("don't have account", error)
-            })
+            .catch(
+                toast.error("don't have account")
+            )
     }
 
     return (

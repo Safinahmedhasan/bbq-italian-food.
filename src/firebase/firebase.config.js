@@ -4,13 +4,15 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('evvarimh data', import.meta.env.VITE_PASS);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB5no00iNnvjRPBxDMZfNBnUAJ0n8fVfFA",
-  authDomain: "bbq-italian-food.firebaseapp.com",
-  projectId: "bbq-italian-food",
-  storageBucket: "bbq-italian-food.appspot.com",
-  messagingSenderId: "1055263952936",
-  appId: "1:1055263952936:web:1e9e28d1d023ef2d25251d"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase

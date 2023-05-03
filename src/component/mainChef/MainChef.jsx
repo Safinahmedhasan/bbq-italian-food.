@@ -36,7 +36,10 @@ const MainChef = () => {
             <h2 className=' font-bold text-center text-4xl'>Our <span className='text-orange-500 '>Best</span> Chef</h2>
             <div className='chefContainer container p-10'>
               {
-                chefs.map(chef => <Chef chef={chef}></Chef>)
+                chefs.map(chef => <Chef
+                  chef={chef}
+                  key={chef.id}
+                  ></Chef>)
               }
             </div>
           </div>

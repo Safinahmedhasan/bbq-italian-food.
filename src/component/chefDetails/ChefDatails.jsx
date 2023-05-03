@@ -31,7 +31,10 @@ const ChefDatails = () => {
             <div className='grid md:grid-cols-3 gap-10 container p-10'>
 
                 {
-                    recipes.map(recipe => <RecipeDetails recipe={recipe}></RecipeDetails>)
+                    recipes.map(recipe => <RecipeDetails
+                         recipe={recipe}
+                         key={recipe.id}
+                         ></RecipeDetails>)
                 }
             </div>
 

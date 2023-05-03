@@ -10,7 +10,6 @@ const Favorite = () => {
 
     const handleFavoriteClick = () => {
         setIsFavorite(true);
-        setShowToast(true);
         toast.success('Added To Favorite ❤️')
     };
 
@@ -19,13 +18,8 @@ const Favorite = () => {
         <div>
             <div>
                 <button onClick={handleFavoriteClick} disabled={isFavorite}>
-                    {isFavorite ? 'Favorite' : 'Add to Favorites'}
+                    {isFavorite ? <button className="btn btn-info text-white">❤️ Added To Favorite</button> : <button className="btn btn-warning ">🤍 Favorite</button>}
                 </button>
-                {showToast && (
-                    <div className="toast">
-                        Recipe added to favorites!
-                    </div>
-                )}
             </div>
             <Toaster />
         </div>
