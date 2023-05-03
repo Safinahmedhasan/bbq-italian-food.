@@ -1,5 +1,4 @@
 import React from 'react';
-import FoodItem from '../FoodItem/FoodItem';
 
 const Banner = () => {
     return (
@@ -10,7 +9,7 @@ const Banner = () => {
 
                 <div className='relative'>
                     <div className='bg-black rounded'>
-                    <img className='rounded w-full h-full opacity-40' src="https://i.ibb.co/4RNvGGm/pexels-ella-olsson-1640773.jpg" alt="" />
+                    <img className='rounded w-full h-full opacity-40' src="https://i.ibb.co/cc05133/pexels-ella-olsson-1640773.jpg" alt="" />
                         
                     </div>
                     <div className='absolute top-32 ml-32'>

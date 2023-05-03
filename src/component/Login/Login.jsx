@@ -1,31 +1,37 @@
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
 
-    const { signIn, googleSignIn , gitHubSignIN } = useContext(AuthContext);
+    const { signIn, googleSignIn, gitHubSignIN } = useContext(AuthContext);
 
-    const handleGoogleSignIn = async (e) =>{
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from =location.state?.from?.pathname || '/'
+   
+
+    const handleGoogleSignIn = async (e) => {
         googleSignIn(googleSignIn)
-        .then(result =>{
-            const loggedUser = result.user;
-            console.log(loggedUser);
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, {replace: true})
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
-    const handleGitHubSignIn = async (e) =>{
+    const handleGitHubSignIn = async (e) => {
         gitHubSignIN(gitHubSignIN)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-        })
-        .catch(error =>{
-            console.log(error);
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from , {replace: true})
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     const handleLogin = event => {
@@ -34,14 +40,14 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password);
+
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                navigate(from , {replace: true})
             })
             .catch(error => {
-                console.log(error);
+                toast.error("don't have account", error)
             })
     }
 

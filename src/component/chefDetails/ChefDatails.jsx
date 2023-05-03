@@ -21,6 +21,7 @@ const ChefDatails = () => {
                             <p className='px-20 py-5 text-xl'>{description} </p>
                             <p className='text-2xl mb-2'>Years of Experience: <span className='text-orange-500 font-extrabold'> {years_of_experience}</span></p>
                             <p className='text-2xl'>Like: <span className='text-blue-500'>{like} 👍</span></p>
+                            <p className='text-2xl mt-2'>Recipe: <span className='text-blue-500'>{number_of_recipes}</span></p>
                         </div>
 
                     </div>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -9,14 +9,17 @@ const Register = () => {
 
     const { createUser , googleSignIn, gitHubSignIN } = useContext(AuthContext);
 
+    const navigate = useNavigate();
+
     const handleGoogleSignIn = async (e) =>{
         googleSignIn(googleSignIn)
         .then(result =>{
             const loggedUser = result.user;
-            console.log(loggedUser);
+            navigate('/login')
+            toast(' Great!! Successfully registration ❤️ Login now ')
         })
         .catch(error => {
-            console.log(error);
+            
         })
     }
 
@@ -25,10 +28,11 @@ const Register = () => {
         gitHubSignIN(gitHubSignIN)
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            navigate('/login')
+            toast.success(' Great!! Successfully registration ❤️ Login now ')
         })
         .catch(error =>{
-            console.log(error);
+            
         })
     }
 
@@ -51,14 +55,15 @@ const Register = () => {
             return
         }
 
-        console.log(name, email, password, confirm);
         createUser(email, password)
             .then(result => {
                 const createUser = result.user;
-                console.log(createUser);
+                navigate('/login')
+                toast.success(' Great!! Successfully registration ❤️ Login now ')
             })
             .catch(error => {
                 console.log(error);
+                toast.error('Already Have an account! Login NOW')
             })
     }
 

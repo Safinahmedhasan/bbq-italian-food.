@@ -15,7 +15,7 @@ const Chef = (props) => {
                     <p>Number Of Recipes: {number_of_recipes}</p>
                     <p>Like: 👍 {like}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/chefdetails/${id}`}><button className="btn btn-warning">View Recipes Button</button></Link>
+                        <Link to={`/chefdetails/${id}`}><button className="btn btn-warning">View Recipe</button></Link>
                     </div>
                 </div>
             </div>
