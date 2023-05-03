@@ -6,7 +6,6 @@ import './MainChef.css'
 const MainChef = () => {
 
   const [chefs, setChefs] = useState([]);
-  console.log(chefs);
 
   useEffect( () =>{
     fetch('http://localhost:5000/allCheif')
