@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import RecipeDetails from '../recipeDetails/RecipeDetails';
 
 const ChefDatails = () => {
 
@@ -23,13 +24,21 @@ const ChefDatails = () => {
                             <p className='text-2xl'>Like: <span className='text-blue-500'>{like} 👍</span></p>
                             <p className='text-2xl mt-2'>Recipe: <span className='text-blue-500'>{number_of_recipes}</span></p>
                         </div>
-
                     </div>
                 </div>
 
             </div>
 
+            <div className='grid grid-cols-3 gap-10 container p-10'>
+                {
+                    recipes.map(recipe => <RecipeDetails recipe={recipe}></RecipeDetails>)
+                }
+            </div>
+
+
         </div>
+        // chefs.map(chef => <Chef chef={chef}></Chef>)
+
     );
 };
 

@@ -14,6 +14,7 @@ import Register from './component/Register/Register.jsx';
 import AuthProvider from './component/AuthProvider/AuthProvider.jsx';
 import ChefDatails from './component/chefDetails/ChefDatails.jsx';
 import PrivateRoute from './component/privateRoute/PrivateRoute.jsx';
+import Recipe from './component/recipe/Recipe.jsx';
 
 
 
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
         path: '/chefdetails/:chefId',
         element: <PrivateRoute><ChefDatails></ChefDatails></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/allCheif/${params.chefId}`)
-      }
+      },
     ],
   },
 ]);
