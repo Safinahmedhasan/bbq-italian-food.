@@ -15,6 +15,7 @@ import AuthProvider from './component/AuthProvider/AuthProvider.jsx';
 import ChefDatails from './component/chefDetails/ChefDatails.jsx';
 import PrivateRoute from './component/privateRoute/PrivateRoute.jsx';
 import Recipe from './component/recipe/Recipe.jsx';
+import NotFoundPage from './component/NotFoundPage/NotFoundPage.jsx';
 
 
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><ChefDatails></ChefDatails></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/allCheif/${params.chefId}`)
       },
+      {
+        path:'/*',
+        element: <NotFoundPage></NotFoundPage>
+      }
     ],
   },
 ]);

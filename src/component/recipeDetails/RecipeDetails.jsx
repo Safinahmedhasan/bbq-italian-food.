@@ -2,7 +2,7 @@ import React from 'react';
 import Favorite from '../Favorite';
 
 const RecipeDetails = (props) => {
-    console.log(props);
+
 
     const { title, description, ingredients, rating, image, cooking_method } = props.recipe;
 
