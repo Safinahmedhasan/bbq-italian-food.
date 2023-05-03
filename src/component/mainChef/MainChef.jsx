@@ -29,7 +29,7 @@ const MainChef = () => {
       <div>
         {loading ? (
           <div className="spinner text-7xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quo ullam rem cupiditate autem sunt iste a qui non accusamus repellendus officiis, repellat inventore, ipsum maxime blanditiis vitae at! Recusandae, facere. Illum quas et ex eum placeat aperiam officiis voluptate autem reprehenderit atque rem, eaque dignissimos animi, hic odit odio perspiciatis. Recusandae illo animi sit laboriosam distinctio nemo optio iusto quam sint eos dolorem debitis qui obcaecati earum assumenda corporis, commodi delectus consectetur quasi perferendis fugit asperiores libero laudantium ipsa. Rerum nisi ipsa explicabo reiciendis sint accusamus dolores numquam, temporibus repudiandae iusto similique quasi accusantium nulla fugiat placeat? Nemo, reprehenderit?
+            <progress className="progress w-56"></progress>
           </div>
         ) : (
           <div>
