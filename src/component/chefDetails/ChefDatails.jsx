@@ -5,10 +5,9 @@ import RecipeDetails from '../recipeDetails/RecipeDetails';
 const ChefDatails = () => {
 
     const chefDetails = useLoaderData();
-    console.log(chefDetails);
 
     const { name, picture, years_of_experience, number_of_recipes, like, id, recipes, description } = chefDetails;
-    console.log(like);
+
 
 
     return (
@@ -38,7 +37,6 @@ const ChefDatails = () => {
 
 
         </div>
-        // chefs.map(chef => <Chef chef={chef}></Chef>)
 
     );
 };
