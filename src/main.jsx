@@ -12,6 +12,7 @@ import Blog from './component/Blog/Blog.jsx';
 import Login from './component/Login/Login.jsx';
 import Register from './component/Register/Register.jsx';
 import AuthProvider from './component/AuthProvider/AuthProvider.jsx';
+import ChefDatails from './component/chefDetails/ChefDatails.jsx';
 
 
 
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/chefdetails/:chefId',
+        element: <ChefDatails></ChefDatails>,
+        loader: ({params}) => fetch(`http://localhost:5000/allCheif/${params.chefId}`)
       }
     ],
   },
