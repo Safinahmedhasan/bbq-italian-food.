@@ -30,7 +30,7 @@ const ChefDatails = () => {
             </div>
             <h2 className='text-center text-4xl font-bold'>Most <span className='text-orange-500'>Popular</span> and <span className='text-orange-500'>Favourite</span> 3 <span>Dish and Recipe </span> </h2>
             <div className='grid md:grid-cols-3 gap-10 container p-10'>
-               
+
                 {
                     recipes.map(recipe => <RecipeDetails recipe={recipe}></RecipeDetails>)
                 }

@@ -10,7 +10,7 @@ const Chef = (props) => {
             <div className="card w-96 bg-base-100 shadow-xl">
                 <figure><img className='' src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
+                    <h2 className="card-title text-2xl text-orange-500">{name}</h2>
                     <p>Experience: {years_of_experience} Year</p>
                     <p>Number Of Recipes: {number_of_recipes}</p>
                     <p>Like: 👍 {like}</p>
