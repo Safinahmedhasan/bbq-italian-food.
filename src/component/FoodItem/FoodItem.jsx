@@ -3,7 +3,7 @@ import React from 'react';
 const FoodItem = () => {
     return (
         <div>
-            <h2 className='text-center text-5xl font-bold mt-32 mb-10'>OUR <span className='bg-orange-500 text-white px-2 py-1 rounded-lg'>FAVORITE</span> FOOD DISHES</h2>
+            <h2 className='text-center md:text-5xl text-xl font-bold mt-32 mb-10'>OUR <span className='bg-orange-500 text-white px-2 py-1 rounded-lg'>FAVORITE</span> FOOD DISHES</h2>
             <div className='grid md:grid-cols-3 p-10 gap-10'>
                 <div className='rounded shadow-md'>
                     <img className='rounded' src=" https://i.ibb.co/XVn6CVf/Margherita-Pizza.jpg" alt="" />
