@@ -15,7 +15,7 @@ const MainChef = () => {
   const [chefs, setChefs] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/allCheif')
+    fetch('https://bbq-italian-server-side-safinahmedhasan.vercel.app/allCheif')
       .then(res => res.json())
       .then(data => setChefs(data))
     setLoading(false);

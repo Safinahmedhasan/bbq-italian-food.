@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -14,7 +13,6 @@ import Register from './component/Register/Register.jsx';
 import AuthProvider from './component/AuthProvider/AuthProvider.jsx';
 import ChefDatails from './component/chefDetails/ChefDatails.jsx';
 import PrivateRoute from './component/privateRoute/PrivateRoute.jsx';
-import Recipe from './component/recipe/Recipe.jsx';
 import NotFoundPage from './component/NotFoundPage/NotFoundPage.jsx';
 
 
@@ -43,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: '/chefdetails/:chefId',
         element: <PrivateRoute><ChefDatails></ChefDatails></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/allCheif/${params.chefId}`)
+        loader: ({params}) => fetch(`https://bbq-italian-server-side-safinahmedhasan.vercel.app/allCheif/${params.chefId}`)
       },
       {
         path:'/*',
