@@ -55,7 +55,7 @@ const Register = () => {
             return
         }
 
-        createUser(email, password)
+        createUser(email, password, photo, name)
             .then(result => {
                 const createUser = result.user;
                 navigate('/login')

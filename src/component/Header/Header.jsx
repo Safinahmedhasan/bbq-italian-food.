@@ -2,15 +2,16 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import ActiveLink from '../activeLink/ActiveLink';
+import ToolTrip from '../Tooltrip/ToolTrip';
 
 const Header = () => {
 
     const { user, logOut, } = useContext(AuthContext);
 
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then()
-        .catch(error =>console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
 
     return (
@@ -41,16 +42,22 @@ const Header = () => {
                             <Link to='/login'><button className='btn btn-warning'>Login</button></Link>
                         }
                     </div>
-                    {user && <div className="dropdown dropdown-end">
+                    {user && <ToolTrip text={user.displayName}><div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+
                             <div className="w-10 rounded-full">
                                 <img src={user?.photoURL} alt="" />
                             </div>
+
                         </label>
                     </div>
+                    </ToolTrip>
                     }
                 </div>
             </div>
+
+
+
         </div>
     );
 };

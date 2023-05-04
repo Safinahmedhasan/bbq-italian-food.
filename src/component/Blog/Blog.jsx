@@ -1,4 +1,5 @@
 import React from 'react';
+import ToolTrip from '../Tooltrip/ToolTrip';
 
 const Blog = () => {
     return (
@@ -41,7 +42,7 @@ const Blog = () => {
                     </div>
                 </div>
 
-               
+                
 
 
             </div>
