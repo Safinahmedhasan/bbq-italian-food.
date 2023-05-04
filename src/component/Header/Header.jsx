@@ -5,7 +5,7 @@ import ActiveLink from '../activeLink/ActiveLink';
 
 const Header = () => {
 
-    const { user, logOut, googleSignIn } = useContext(AuthContext);
+    const { user, logOut, } = useContext(AuthContext);
 
     const handleLogOut = () =>{
         logOut()
@@ -44,10 +44,11 @@ const Header = () => {
                     {user && <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
-                                <img src="https://i.ibb.co/m0hx2mp/pngtree-vector-avatar-icon-png-image-313572.jpg" alt="" />
+                                <img src={user?.photoURL} alt="" />
                             </div>
                         </label>
-                    </div>}
+                    </div>
+                    }
                 </div>
             </div>
         </div>

@@ -7,15 +7,19 @@ const Login = () => {
 
     const { signIn, googleSignIn, gitHubSignIN } = useContext(AuthContext);
 
+    const [user, setUser] = useState(null)
+
     const navigate = useNavigate();
     const location = useLocation();
     const from =location.state?.from?.pathname || '/'
    
 
-    const handleGoogleSignIn = async (e) => {
+    const handleGoogleSignIn = () => {
         googleSignIn(googleSignIn)
             .then(result => {
                 const loggedUser = result.user;
+                // console.log(loggedUser);
+                setUser(loggedUser)
                 navigate(from, {replace: true})
             })
             .catch(error => {
@@ -23,7 +27,7 @@ const Login = () => {
             })
     }
 
-    const handleGitHubSignIn = async (e) => {
+    const handleGitHubSignIn = () => {
         gitHubSignIN(gitHubSignIN)
             .then(result => {
                 const loggedUser = result.user;
