@@ -1,16 +1,27 @@
 import React from 'react';
+import './about.css'
 
 const AboutRestaurant = () => {
     return (
         <div>
-            <div className='flex p-20'>
-                <div className='p-16'>
-                    <h2 className='text-5xl font-bold mb-4'><span className='text-orange-500'>WelCome</span> To Out <span className='text-lime-500'>BeautyFull Restaurant</span></h2>
-                    <p className='text-2xl p-2 font-bold'>My name John <span className='text-orange-500'>Smith Chef and Owner</span> </p>
-                    <p className=''>A restaurant is a business that serves food and drinks to customers for on-site consumption. It provides a dining experience with a menu of various food options and beverages. The goal is to offer a pleasant environment where people can enjoy a meal prepared by chefs and served by staff members.</p>
+            <h2 className='text-5xl font-bold text-center mt-16'><span className='bg-orange-500 text-white px-5 rounded-xl'>Hi</span> WHAT'S UP</h2>
+            <div className='grid md:grid-cols-2 gap-20 mb-32'>
+                <div className='mb-52 md:p-0 p-20'>
+                    <div className='relative '>
+                        <img className='' src="https://i.ibb.co/tmXjJ9d/Untitled.png" alt="" />
+                        <img className='absolute top-0 ml-20 exx' src="https://i.ibb.co/nft32xR/about-1.png" alt="" />
+                        <img className='absolute top-32' src="https://i.ibb.co/yNffspw/about-2.png" alt="" />
+                        <img className='absolute left-[500px]' src="https://i.ibb.co/HrfsKs0/vector-1.png" alt="" />
+
+                    </div>
                 </div>
-                <div>
-                    <img className='w-[2000px]' src="https://i.ibb.co/Jkm0WZh/chef01.png" alt="" />
+
+                <div className='w-9/12 p-10 textadd mx-auto'>
+                    <div>
+                        <h2 className='text-5xl font-semibold mb-5'>Traditional & Modern Service Since <span className='text-orange-500'>1970</span> </h2>
+                        <p>Ut neque turpis dolor sit amet consectetur adipiscing elit purus egestas diam sit vitae egestas suspendisse amet ultricies eu. Eget at porttitor morbi blandit ac vitae, dolor. Gravida eu vel ac luctus. Hac a vel est malesuada tellus sed nunc, etiam maecenas. </p>
+                    </div>
+
                 </div>
             </div>
         </div>

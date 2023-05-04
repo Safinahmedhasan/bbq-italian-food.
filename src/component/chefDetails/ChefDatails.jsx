@@ -27,7 +27,7 @@ const ChefDatails = () => {
                 </div>
 
             </div>
-            <h2 className='text-center text-4xl font-bold'>Most <span className='text-orange-500'>Popular</span> and <span className='text-orange-500'>Favourite</span> 3 <span>Dish and Recipe </span> </h2>
+            <h2 className='text-center text-4xl font-bold'>MOST <span className='bg-orange-500 text-white rounded px-2 py-1'>POPULER</span> AND <span className='bg-orange-500 text-white rounded px-2 py-1'>FAVORITE</span> 3 <span>DISH AND RECIPE </span> </h2>
             <div className='grid md:grid-cols-3 gap-10 container p-10'>
 
                 {

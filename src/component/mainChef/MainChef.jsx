@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Chef from '../Chef/Chef';
-import './MainChef.css'
 
 
 const MainChef = () => {
@@ -33,8 +32,8 @@ const MainChef = () => {
           </div>
         ) : (
           <div>
-            <h2 className=' font-bold text-center text-4xl'>Our <span className='text-orange-500 '>Best</span> Chef</h2>
-            <div className='chefContainer container p-10'>
+            <h2 className=' font-bold text-center text-5xl'>OUR <span className=' text-white bg-orange-500 px-2 rounded '>BEST</span> CHEF</h2>
+            <div className='grid md:grid-cols-3 gap-10 mb-20 md:w-11/12 w-7/12 mx-auto mt-10'>
               {
                 chefs.map(chef => <Chef
                   chef={chef}

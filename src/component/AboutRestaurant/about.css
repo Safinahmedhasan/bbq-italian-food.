@@ -1,0 +1,9 @@
+
+.exx{
+    width: 500px;
+}
+.textadd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
